@@ -42,6 +42,10 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'faker'
 gem 'carrierwave', '~> 1.2'
+# Free database image
+gem 'unsplash'
+# Shrine is a toolkit for handling file attachments in Ruby applications.
+gem "shrine", "~> 3.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,9 +1,20 @@
-<h1>Stranger Desserts</h1>
-
-<% @cocktails.each do |cocktail| %>
-    <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-<% end %>
-
-<div><h4><%= link_to "Create a Stranger Dessert", new_cocktail_path %></h4></div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Posse</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+<div class="card-container">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card" style="width: 350px;">
+      <%= image_tag "https://i.pinimg.com/564x/3f/b2/46/3fb24623f86939bc1f212a9e82bb9a06.jpg", class: "card-img-top" %>
+      <div class="card-body">
+        <p class="card-text text-center"><%= cocktail.name %></p>
+        <button type="button" class="btn btn-outline-info btn-sm"><%= link_to "See Recipe", cocktail_path(cocktail[:id]) %></button>
+        <button type="button" class="btn btn-outline-warning btn-sm">Edit</button>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 

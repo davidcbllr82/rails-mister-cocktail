@@ -1,9 +1,19 @@
-<h1><%= @cocktail[:name] %></h1>
-
-<%#= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-<img src="<%= @cocktail.photo %>" alt="">
-<p> <%= @cocktail.photo %></p>
-<div class="container">
-  <div><h4><%= link_to "Back to menu", cocktails_path %></h4>
-  <h5><%= link_to "Delete dessert", cocktail_path(@cocktail), method: :delete %></h5>
+<div class="container container-show>">
+  <div class="card" style="width: 38rem;">
+    <%= image_tag "https://i.pinimg.com/564x/3f/b2/46/3fb24623f86939bc1f212a9e82bb9a06.jpg", class: "card-img-show" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= @cocktail[:name] %></h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Edit</li>
+      <li class="list-group-item">Read Review</li>
+      <li class="list-group-item">Delete</li>
+    </ul>
+    <div class="card-body">
+      <h4><%= link_to "Back to menu", cocktails_path %></h4>
+      <h5><%= link_to "Delete dose", cocktail_path(@cocktail), method: :delete %></h5>
+    </div>
+  </div>
 </div>
+

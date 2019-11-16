@@ -1,2 +1,9 @@
-<h1>Cocktails#create</h1>
+<h1>Create your recipe:</h1>
 <p>Find me in app/views/cocktails/create.html.erb</p>
+
+<img src="<%= @cocktail(params[:photo]) %>" alt="">
+<p><%= @cocktail.photo %></p>
+<div class="container">
+  <div><h4><%= link_to "Back to menu", cocktails_path %></h4>
+</div>
+

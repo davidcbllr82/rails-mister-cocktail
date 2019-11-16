@@ -1,0 +1,30 @@
+// $imgKey: random(5);
+// $url: "https://source.unsplash.com/random";
+// $list: dessert, cake, cookies, strawberry, cinamon;
+// $url-list: $url + $list
+// $nth: nth($url-list, $imgKey);
+
+.card-img-top {
+  background-image: url("https://source.unsplash.com/random/900x750?dessert");
+  width: 350px;
+  height: 200px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.card-img-show {
+  width: 38rem;
+  height: 19rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.container-show {
+  margin-top: 20px;
+}

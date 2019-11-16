@@ -1,7 +1,7 @@
 25.times do
   Cocktail.create(
     name: Faker::Dessert.variety,
-    photo: "https://res.cloudinary.com/hard-to-debug-issues/image/upload/v1573827827/200485_3000x2000_mkbr3o.jpg"
+    image_data: Unsplash::Photo.search('dessert', 1, 1)
   )
 end
 
@@ -22,3 +22,28 @@ end
     content: Faker::TvShows::StrangerThings.quote
   )
 end
+
+# module Seeds
+#   module Images
+#     def self.seed(property:)
+#       p 'Seeding property images...'
+#       # Add more than 20 items to test pagination.
+#       unsplash_images = Unsplash::Photo.search('dessert', 1, 25)
+
+#       unsplash_images.each do |unsplash_image|
+#         image = Properties::Image.create!(
+#           property: property,
+#           category: Properties::Image.categories.keys.sample,
+#           taken_on: rand(5..200).days.ago,
+#           title: unsplash_image.description,
+#           file_remote_url: unsplash_image.urls.regular
+#         )
+#         Properties::Images::Publisher.(image)
+#       end
+
+#       p 'Done seeding images! 🎉'
+#     rescue Unsplash::UnauthorizedError
+#       p 'Unsplash API keys not found, no images will be seeded.'
+#     end
+#   end
+# end
