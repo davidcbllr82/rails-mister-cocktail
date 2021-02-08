@@ -41,7 +41,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'faker'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 # Free database image
 gem 'unsplash'
 # Shrine is a toolkit for handling file attachments in Ruby applications.
